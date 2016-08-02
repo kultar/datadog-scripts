@@ -7,7 +7,7 @@ app_key=
 ret=""
 
 
-$(curl -G "https://app.datadoghq.com/api/v1/monitor" \
+$(curl --silent -G "https://app.datadoghq.com/api/v1/monitor" \
      -d "api_key=${api_key}" \
      -d "application_key=${app_key}" >/tmp/dd_status )
 
